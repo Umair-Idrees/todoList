@@ -6,181 +6,76 @@
     <title>Todo App</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-
   <body>
-    <!-- Using Tailwind CSS for Designing -->
-    <div id="head" class="flex border-black-800 border-t-2">
-      <div class="w-full">
-        <!-- This is Header -->
-        <header
-          class="flex bg-black justify-between h-20 border-b border-b-gray-200 items-center px-6 bg-yellow-100 pl-6"
-        >
-          <div id="left-header">
-            <ul
-              class="bg-gradient-to-r from-yellow-300 via-yellow-500 to-yellow-700 text-transparent bg-clip-text"
-            >
-              <img
-                src="logo.png"
-                alt="logo"
-                height="170px"
-                width="170px"
-                class="mt-4"
-              />
-            </ul>
-          </div>
-          <div
-            id="center"
-            class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-yellow-500"
-          >
-            TodoList
-            <div class="inline-block translate-y-[-10px]">
-              <!-- Adjust translate value  -->
-              <span
-                class="px-3 py-0.5 text-[10px] animate-pulse font-semibold text-white bg-yellow-600 rounded-full p"
-              >
-                PRO
-              </span>
-            </div>
-          </div>
-
-          <div
-            id="right-header"
-            class="text-gray-800 hover:text-gray-600 space-x-3"
-          >
-            <img
-              src="https://scontent.flhe32-1.fna.fbcdn.net/v/t1.6435-9/104689225_1144037479302155_7009068466970536847_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeEK1N0bfma_Ni7cdwckWDfeXvBJ-0BFSr1e8En7QEVKvY6ubCMONwL_dgNPDarrvX-dMontzORGY3Ayin3z1of2&_nc_ohc=sAoeUstcQ-IQ7kNvgHVQ09Q&_nc_ht=scontent.flhe32-1.fna&oh=00_AYAVKcxZZyFAHJTHBUu0SdUDJfhueDkbSTRtw8sGyAeeQA&oe=671BADE3"
-              alt="logoPhoto"
-              class="rounded-full"
-              width="80px"
-              height="80px"
-            />
-          </div>
-        </header>
-      </div>
-    </div>
-
-    <!-- All Body -->
-    <div id="content" class="mx-auto" style="max-width: 500px">
-      <div class="container content py-6 mx-auto">
-        <div class="mx-auto">
-          <div
-            class="font-bold text-center text-2xl p-6 bg-gradient-to-r from-green-950 to-yellow-800 text-transparent bg-clip-text"
-          >
-            EFFORTLESSLY ORGANIZE YOUR TAKS AND CONQUER GOALS
-          </div>
-          <div
-            id="create-form"
-            class="hover:shadow p-6 bg-white border-b border-green-100 border-t-2"
-          >
-            <div class="flex">
-              <h2 class="font-semibold text-lg text-black mb-5">
-                Create New Todo
-              </h2>
-            </div>
-            <div>
-              <form id="todo-form">
-                <div class="mb-6">
-                  <label
-                    for="title"
-                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >* Todo</label
-                  >
-                  <input
-                    type="text"
-                    id="title"
-                    placeholder="Write to Add..."
-                    class="bg-yellow-200 text-black text-sm rounded block w-full p-2.5"
-                    required
-                  />
-                  <span
-                    class="text-red-500 text-xs mt-3 block"
-                    id="error-message"
-                  ></span>
-                </div>
-                <button
-                  type="submit"
-                  class="px-4 py-2 text-white font-semibold rounded bg-gradient-to-r from-yellow-400 to-yellow-800 hover:from-yellow-500 hover:to-orange-500"
-                >
-                  Create +
-                </button>
-                <span
-                  class="text-yellow-800 text-xs"
-                  id="success-message"
-                ></span>
-              </form>
-            </div>
-          </div>
-        </div>
+    <header
+      class="flex bg-yellow-100 justify-between h-20 border-b border-b-gray-200 items-center px-6"
+    >
+      <div>
+        <img src="logo.png" alt="logo" class="mt-4 h-20 w-20" />
       </div>
       <div
-        id="search-box"
-        class="flex flex-col items-center px-2 my-4 justify-center"
+        class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-yellow-500"
       >
-        <div class="flex justify-center items-center">
-          <div class="relative">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="absolute left-3 top-2 w-5 h-5 text-gray-500"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 4a6 6 0 100 12 6 6 0 000-12zm8 8l4 4"
-              />
-            </svg>
-            <input
-              type="text"
-              id="search-input"
-              class="bg-yellow-200 pl-10 rounded px-4 py-2"
-              placeholder="Fast Search..."
-            />
-          </div>
-        </div>
+        TodoList
+        <span
+          class="px-3 py-0.5 text-[10px] animate-pulse font-semibold text-white bg-yellow-600 rounded-full"
+          >PRO</span
+        >
+      </div>
+      <div>
+        <img src="profile.jpg" alt="Profile" class="rounded-full h-20 w-20" />
+      </div>
+    </header>
 
-        <span class="text-green-500 text-xs block"></span>
+    <main class="mx-auto max-w-md py-6">
+      <h2
+        class="font-bold text-center text-2xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-950 to-yellow-800"
+      >
+        EFFORTLESSLY ORGANIZE YOUR TASKS
+      </h2>
+      <div
+        class="hover:shadow p-6 bg-white border-b border-green-100 border-t-2"
+      >
+        <h2 class="font-semibold text-lg text-black mb-5">Create New Todo</h2>
+        <form id="todo-form">
+          <label
+            for="title"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >* Todo</label
+          >
+          <input
+            type="text"
+            id="title"
+            placeholder="Write to Add..."
+            class="bg-yellow-200 text-black text-sm rounded block w-full p-2.5"
+            required
+          />
+          <span
+            class="text-red-500 text-xs mt-3 block"
+            id="error-message"
+          ></span>
+          <button
+            type="submit"
+            class="px-4 py-2 text-white font-semibold rounded bg-gradient-to-r from-yellow-400 to-yellow-800 hover:from-yellow-500 hover:to-orange-500"
+          >
+            Create +
+          </button>
+          <span class="text-yellow-800 text-xs" id="success-message"></span>
+        </form>
+      </div>
+
+      <div id="search-box" class="flex flex-col items-center px-2 my-4">
+        <input
+          type="text"
+          id="search-input"
+          class="bg-yellow-200 pl-10 rounded px-4 py-2"
+          placeholder="Fast Search..."
+        />
       </div>
       <div id="todos-list"></div>
-    </div>
+    </main>
 
-    <!-- JavaScript Code -->
     <script>
-      // Function to create and show the modal
-      function showModal() {
-        // Create a modal div element
-        const modal = document.createElement("div");
-        // Set the modal's classes for styling and positioning
-        modal.className =
-          "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50";
-
-        // Set the inner HTML of the modal
-        modal.innerHTML = `
-        <div class="bg-green-100 rounded-lg px-8 py-8 max-w-sm mx-auto">
-            <h2 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-yellow-500 mb-4">About TodoList</h2>
-            <p class="text-gray-700 text-base mb-10 text-center">Stay organized and achieve your goals! Don’t forget to check your tasks today.</p>
-            <div class="flex justify-center">
-                <button id="close-modal" class="px-4 py-2 text-white font-semibold rounded bg-gradient-to-r from-yellow-400 to-yellow-800 hover:from-yellow-500 hover:to-orange-500">Got It!</button>
-            </div>
-        </div>
-    `;
-
-        // Append the modal to the body of the document
-        document.body.appendChild(modal);
-
-        // Add event listener to the close button to remove the modal when clicked
-        document.getElementById("close-modal").addEventListener("click", () => {
-          document.body.removeChild(modal);
-        });
-      }
-
-      // Add event listener to the profile image to show the modal when clicked
-      const profileImage = document.querySelector("#right-header img");
-      profileImage.addEventListener("click", showModal);
-
-      // Getting all relevant HTML elements
       const todoForm = document.getElementById("todo-form");
       const todoListContainer = document.getElementById("todos-list");
       const titleInput = document.getElementById("title");
@@ -188,107 +83,74 @@
       const successMessage = document.getElementById("success-message");
       const searchInput = document.getElementById("search-input");
 
-      // Load todos from local storage or initialize as an empty array
       let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
-      // Function to render todos in the todo list
       function renderTodos(filter = "") {
-        // Clear the current todo list
         todoListContainer.innerHTML = "";
-        // Filter todos based on the search input
         const filteredTodos = todos.filter((todo) =>
           todo.title.toLowerCase().includes(filter.toLowerCase())
         );
-
-        // Iterate through the filtered todos and create HTML elements for each
         filteredTodos.forEach((todo, index) => {
           const todoDiv = document.createElement("div");
           todoDiv.className =
-            "todo mb-5 card px-5 py-6 bg-white col-span-1 border-t-2 border-green-200 hover:shadow";
+            "todo mb-5 bg-white p-4 border-t-2 border-green-200";
           todoDiv.innerHTML = `
-            <div class="flex justify-between space-x-2">
-                <h3 class="text-lg font-bold text-brown-400 bg-gradient-to-r from-green-950 to-yellow-800 text-transparent bg-clip-text ">${todo.title}</h3>
-                <div class="flex items-center space-x-2">
-                    <button class="text-sm text-white font-semibold rounded px-4 py-2 bg-green-400" onclick="editTodo(${index})">
-                        Edit
-                    </button>
-                    <button class="text-sm text-red-500 font-semibold rounded px-4 py-2 bg-red-400 text-white mr-1" onclick="deleteTodo(${index})">
-                        Remove
-                    </button>
-                </div>
-            </div>
-            <span class="text-xs text-green-800 mb-3 ">${todo.date}</span>
-        `;
-          // Append the todo element to the list
+                    <div class="flex justify-between">
+                        <h3 class="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-950 to-yellow-800">${todo.title}</h3>
+                        <div>
+                            <button class="text-sm text-white font-semibold rounded px-4 py-2 bg-green-400" onclick="editTodo(${index})">Edit</button>
+                            <button class="text-sm text-red-500 font-semibold rounded px-4 py-2 bg-red-400" onclick="deleteTodo(${index})">Remove</button>
+                        </div>
+                    </div>
+                    <span class="text-xs text-green-800">${todo.date}</span>
+                `;
           todoListContainer.appendChild(todoDiv);
         });
       }
 
-      // Function to add a new todo
       function addTodo() {
-        // Get the title from the input field
         const title = titleInput.value.trim();
         if (title) {
-          // Get the current date
           const date = new Date().toLocaleDateString();
-          // Create a new todo object
-          const newTodo = { title, date };
-
-          // Add the new todo to the todos array
-          todos.push(newTodo);
-          // Update local storage with the new todos array
+          todos.push({ title, date });
           localStorage.setItem("todos", JSON.stringify(todos));
-          // Clear the input field and display success message
           titleInput.value = "";
           successMessage.textContent = "Todo created successfully!";
           errorMessage.textContent = "";
-          renderTodos(); // Re-render the todo list after adding
+          renderTodos();
         } else {
-          // Display an error message if the title is empty
           errorMessage.textContent = "Todo title cannot be empty.";
         }
       }
 
-      // Function to edit an existing todo
       function editTodo(index) {
-        // Prompt the user to enter a new title for the todo
         const title = prompt("Edit your todo:", todos[index].title);
         if (title) {
-          // Update the title in the todos array
           todos[index].title = title;
-          // Update local storage with the modified todos array
           localStorage.setItem("todos", JSON.stringify(todos));
-          renderTodos(); // Re-render the todo list after editing
+          renderTodos();
         }
       }
 
-      // Function to delete a todo
       function deleteTodo(index) {
-        // Confirm with the user before deleting
         if (confirm("Are you sure you want to delete this todo?")) {
-          // Remove the todo from the array
           todos.splice(index, 1);
-          // Update local storage with the modified todos array
           localStorage.setItem("todos", JSON.stringify(todos));
-          renderTodos(); // Re-render the todo list after deleting
+          renderTodos();
         }
       }
 
-      // Add event listeners to the form and search input
       todoForm.addEventListener("submit", (e) => {
-        e.preventDefault(); // Prevent default form submission
-        addTodo(); // Call addTodo function
+        e.preventDefault();
+        addTodo();
       });
 
-      // Event listener for the search input to filter todos in real-time
       searchInput.addEventListener("input", (e) => {
-        const filter = e.target.value;
-        renderTodos(filter); // Render todos based on the search filter
+        renderTodos(e.target.value);
       });
 
-      // Render todos on page load
       window.onload = () => {
-        renderTodos(); // Display todos stored in localStorage
+        renderTodos();
       };
     </script>
   </body>
